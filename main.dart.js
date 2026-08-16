@@ -41876,15 +41876,15 @@ A.ahF.prototype={
 $2(a,b){return A.x1(new A.ahE(b),t.XW,t.ft)},
 $S:381}
 A.ahE.prototype={
-$2(a,b){var s,r=null,q=b.b,p=A.aza(A.l8(B.ak,r,r,r,r,r,r).ok),o=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.S,56,B.al,1.1,-2),n=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.S,48,B.al,1.15,-1.5),m=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.S,40,B.a3,1.2,-1),l=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.S,28,B.aD,1.3,-0.5),k=A.eF().$4$color$fontSize$fontWeight$height(B.S,20,B.aD,1.35),j=A.eF().$4$color$fontSize$fontWeight$height(B.S,16,B.J,1.4)
+$2(a,b){var s,r=null,q=b.b,p=A.aza(A.l8(B.ak,r,r,r,r,r,r).ok),o=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.S,48,B.al,1.1,-2),n=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.S,40,B.al,1.15,-1.5),m=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.S,32,B.a3,1.2,-1),l=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.S,24,B.aD,1.3,-0.5),k=A.eF().$4$color$fontSize$fontWeight$height(B.S,18,B.aD,1.35),j=A.eF().$4$color$fontSize$fontWeight$height(B.S,16,B.J,1.4)
 j=p.Tv(A.eF().$4$color$fontSize$fontWeight$height(B.V,16,B.r,1.6),A.eF().$4$color$fontSize$fontWeight$height(B.V,14,B.r,1.6),o,n,m,l,A.eF().$4$color$fontSize$fontWeight$letterSpacing(B.S,14,B.J,0.2),k,j)
 j=A.l8(B.ak,new A.od(r,B.e,r,r,0,r,new A.cD(A.aX(12),B.B1)),B.CL,B.E8,B.h5,j,!0)
 p=A.aza(A.l8(B.G,r,r,r,r,r,r).ok)
-k=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.R,56,B.al,1.1,-2)
-l=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.R,48,B.al,1.15,-1.5)
-m=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.R,40,B.a3,1.2,-1)
-n=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.R,28,B.aD,1.3,-0.5)
-o=A.eF().$4$color$fontSize$fontWeight$height(B.R,20,B.aD,1.35)
+k=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.R,48,B.al,1.1,-2)
+l=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.R,40,B.al,1.15,-1.5)
+m=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.R,32,B.a3,1.2,-1)
+n=A.eF().$5$color$fontSize$fontWeight$height$letterSpacing(B.R,24,B.aD,1.3,-0.5)
+o=A.eF().$4$color$fontSize$fontWeight$height(B.R,18,B.aD,1.35)
 s=A.eF().$4$color$fontSize$fontWeight$height(B.R,16,B.J,1.4)
 s=p.Tv(A.eF().$4$color$fontSize$fontWeight$height(B.Y,16,B.r,1.6),A.eF().$4$color$fontSize$fontWeight$height(B.Y,14,B.r,1.6),k,l,m,n,A.eF().$4$color$fontSize$fontWeight$letterSpacing(B.R,14,B.J,0.2),o,s)
 s=A.l8(B.G,new A.od(r,B.E,r,r,0,r,new A.cD(A.aX(12),B.B2)),B.CI,B.E9,B.jx,s,!0)
@@ -42113,11 +42113,11 @@ a3C(a,b,c){var s=null,r=A.b2(a,B.aw,t.w).w.a.a<768,q=r?B.z:B.x,p=B.p.cX(0.1),o=A
 p=A.aS(s,A.a3("INDEPENDENT SOFTWARE STUDIO",s,s,s,l==null?s:l.Gc(B.p,12,B.a3,1.5),s,s),B.l,s,s,new A.b_(p,s,n,o,s,s,B.y),s,s,s,B.EO,s,s,s)
 o=m.a
 if(o==null)o=s
-else o=o.aj_(r?40:56)
+else o=o.aj_(r?36:48)
 o=A.a3("Build. Ship. Improve.",s,s,s,o,r?B.di:B.aO,s)
 m=m.e
 if(m==null)n=s
-else{n=r?20:28
+else{n=r?18:24
 n=m.tt(b?B.Y:B.V,n)}n=A.a3(u.W,s,s,s,n,r?B.di:B.aO,s)
 m=r?B.m4:B.bC
 l=t.p
