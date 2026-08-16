@@ -40,11 +40,11 @@ class ContactPage extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.all(isMobile ? 24 : 36),
               decoration: BoxDecoration(
-                color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+                color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
                   color: isDark
-                      ? BrandColors.borderDark
+                      ? BrandColors.border
                       : BrandColors.borderLight,
                   width: 1.5,
                 ),
@@ -58,8 +58,8 @@ class ContactPage extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                       fontSize: isMobile ? 22 : 26,
                       color: isDark
-                          ? BrandColors.textDarkPrimary
-                          : BrandColors.textLightPrimary,
+                          ? BrandColors.textMain
+                          : BrandColors.textMainLight,
                     ),
                   ),
                   const SizedBox(height: 24),
@@ -110,11 +110,11 @@ class ContactPage extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.all(isMobile ? 20 : 28),
               decoration: BoxDecoration(
-                color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+                color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
                   color: isDark
-                      ? BrandColors.borderDark
+                      ? BrandColors.border
                       : BrandColors.borderLight,
                   width: 1.5,
                 ),
@@ -126,7 +126,7 @@ class ContactPage extends StatelessWidget {
                     child: Container(
                       width: 56,
                       height: 56,
-                      color: BrandColors.electricBlue,
+                      color: BrandColors.primary,
                       child: Image.asset(
                         AssetPaths.founderAvatar,
                         width: 56,
@@ -153,15 +153,15 @@ class ContactPage extends StatelessWidget {
                             fontWeight: FontWeight.w800,
                             fontSize: 18,
                             color: isDark
-                                ? BrandColors.textDarkPrimary
-                                : BrandColors.textLightPrimary,
+                                ? BrandColors.textMain
+                                : BrandColors.textMainLight,
                           ),
                         ),
                         const SizedBox(height: 4),
                         Text(
                           BrandConfig.founderRole,
                           style: theme.textTheme.bodyMedium?.copyWith(
-                            color: BrandColors.electricBlue,
+                            color: BrandColors.primary,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -205,10 +205,10 @@ class _ContactChannelTile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: isDark ? BrandColors.deepNavy : BrandColors.surfaceLight,
+        color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: isDark ? BrandColors.borderDark : BrandColors.borderLight,
+          color: isDark ? BrandColors.border : BrandColors.borderLight,
         ),
       ),
       child: Row(
@@ -216,10 +216,10 @@ class _ContactChannelTile extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: BrandColors.electricBlue.withValues(alpha: 0.12),
+              color: BrandColors.primary.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Icon(icon, color: BrandColors.electricBlue, size: 24),
+            child: Icon(icon, color: BrandColors.primary, size: 24),
           ),
           const SizedBox(width: 16),
           Expanded(
@@ -232,8 +232,8 @@ class _ContactChannelTile extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     fontSize: 16,
                     color: isDark
-                        ? BrandColors.textDarkPrimary
-                        : BrandColors.textLightPrimary,
+                        ? BrandColors.textMain
+                        : BrandColors.textMainLight,
                   ),
                 ),
                 const SizedBox(height: 2),
@@ -241,8 +241,8 @@ class _ContactChannelTile extends StatelessWidget {
                   subtitle,
                   style: theme.textTheme.bodyMedium?.copyWith(
                     color: isDark
-                        ? BrandColors.textDarkSecondary
-                        : BrandColors.textLightSecondary,
+                        ? BrandColors.textSecondary
+                        : BrandColors.textSecondaryLight,
                     fontSize: 14,
                   ),
                 ),

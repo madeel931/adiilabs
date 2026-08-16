@@ -40,11 +40,11 @@ class AboutPage extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.all(isMobile ? 24 : 36),
               decoration: BoxDecoration(
-                color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+                color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
                   color: isDark
-                      ? BrandColors.borderDark
+                      ? BrandColors.border
                       : BrandColors.borderLight,
                   width: 1.5,
                 ),
@@ -58,8 +58,8 @@ class AboutPage extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                       fontSize: isMobile ? 22 : 28,
                       color: isDark
-                          ? BrandColors.textDarkPrimary
-                          : BrandColors.textLightPrimary,
+                          ? BrandColors.textMain
+                          : BrandColors.textMainLight,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -67,8 +67,8 @@ class AboutPage extends StatelessWidget {
                     'The studio uses Flutter and modern development tools, including AI-assisted development, to move from idea to shipped product efficiently.',
                     style: theme.textTheme.bodyLarge?.copyWith(
                       color: isDark
-                          ? BrandColors.textDarkSecondary
-                          : BrandColors.textLightSecondary,
+                          ? BrandColors.textSecondary
+                          : BrandColors.textSecondaryLight,
                       fontSize: 17,
                       height: 1.6,
                     ),
@@ -78,8 +78,8 @@ class AboutPage extends StatelessWidget {
                     'The studio philosophy is simple: Build. Ship. Improve. Every product is engineered with clean architecture, offline capabilities, and direct user value.',
                     style: theme.textTheme.bodyLarge?.copyWith(
                       color: isDark
-                          ? BrandColors.textDarkSecondary
-                          : BrandColors.textLightSecondary,
+                          ? BrandColors.textSecondary
+                          : BrandColors.textSecondaryLight,
                       fontSize: 17,
                       height: 1.6,
                     ),
@@ -96,8 +96,8 @@ class AboutPage extends StatelessWidget {
                 fontSize: 28,
                 fontWeight: FontWeight.w800,
                 color: isDark
-                    ? BrandColors.textDarkPrimary
-                    : BrandColors.textLightPrimary,
+                    ? BrandColors.textMain
+                    : BrandColors.textMainLight,
               ),
             ),
             const SizedBox(height: 24),
@@ -105,11 +105,11 @@ class AboutPage extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.all(isMobile ? 24 : 36),
               decoration: BoxDecoration(
-                color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+                color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
                   color: isDark
-                      ? BrandColors.borderDark
+                      ? BrandColors.border
                       : BrandColors.borderLight,
                   width: 1.5,
                 ),
@@ -125,7 +125,7 @@ class AboutPage extends StatelessWidget {
                         child: Container(
                           width: 64,
                           height: 64,
-                          color: BrandColors.electricBlue,
+                          color: BrandColors.primary,
                           child: Image.asset(
                             AssetPaths.founderAvatar,
                             width: 64,
@@ -136,7 +136,7 @@ class AboutPage extends StatelessWidget {
                                   child: Text(
                                     'MA',
                                     style: TextStyle(
-                                      color: BrandColors.white,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.w900,
                                       fontSize: 24,
                                     ),
@@ -156,15 +156,15 @@ class AboutPage extends StatelessWidget {
                                 fontWeight: FontWeight.w800,
                                 fontSize: isMobile ? 22 : 26,
                                 color: isDark
-                                    ? BrandColors.textDarkPrimary
-                                    : BrandColors.textLightPrimary,
+                                    ? BrandColors.textMain
+                                    : BrandColors.textMainLight,
                               ),
                             ),
                             const SizedBox(height: 4),
                             Text(
                               BrandConfig.founderRole,
                               style: theme.textTheme.titleMedium?.copyWith(
-                                color: BrandColors.electricBlue,
+                                color: BrandColors.primary,
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -179,8 +179,8 @@ class AboutPage extends StatelessWidget {
                     BrandConfig.founderBio,
                     style: theme.textTheme.bodyLarge?.copyWith(
                       color: isDark
-                          ? BrandColors.textDarkSecondary
-                          : BrandColors.textLightSecondary,
+                          ? BrandColors.textSecondary
+                          : BrandColors.textSecondaryLight,
                       fontSize: 16,
                       height: 1.6,
                     ),
@@ -193,8 +193,8 @@ class AboutPage extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
                       color: isDark
-                          ? BrandColors.textDarkPrimary
-                          : BrandColors.textLightPrimary,
+                          ? BrandColors.textMain
+                          : BrandColors.textMainLight,
                     ),
                   ),
                   const SizedBox(height: 12),
@@ -241,10 +241,10 @@ class AboutPage extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.all(isMobile ? 24 : 36),
               decoration: BoxDecoration(
-                color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+                color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color: BrandColors.electricBlue.withValues(alpha: 0.4),
+                  color: BrandColors.primary.withValues(alpha: 0.4),
                   width: 1.5,
                 ),
               ),
@@ -257,8 +257,8 @@ class AboutPage extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                       fontSize: isMobile ? 22 : 26,
                       color: isDark
-                          ? BrandColors.textDarkPrimary
-                          : BrandColors.textLightPrimary,
+                          ? BrandColors.textMain
+                          : BrandColors.textMainLight,
                     ),
                   ),
                   const SizedBox(height: 12),
@@ -266,8 +266,8 @@ class AboutPage extends StatelessWidget {
                     'Follow the development process, technical lessons, product decisions, failures, fixes, and launches behind ADii Labs.',
                     style: theme.textTheme.bodyLarge?.copyWith(
                       color: isDark
-                          ? BrandColors.textDarkSecondary
-                          : BrandColors.textLightSecondary,
+                          ? BrandColors.textSecondary
+                          : BrandColors.textSecondaryLight,
                       fontSize: 16,
                       height: 1.6,
                     ),
@@ -303,18 +303,18 @@ class _FocusTag extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
       decoration: BoxDecoration(
-        color: isDark ? BrandColors.deepNavy : BrandColors.surfaceLight,
+        color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          color: isDark ? BrandColors.borderDark : BrandColors.borderLight,
+          color: isDark ? BrandColors.border : BrandColors.borderLight,
         ),
       ),
       child: Text(
         label,
         style: theme.textTheme.bodyMedium?.copyWith(
           color: isDark
-              ? BrandColors.textDarkPrimary
-              : BrandColors.textLightPrimary,
+              ? BrandColors.textMain
+              : BrandColors.textMainLight,
           fontWeight: FontWeight.w600,
           fontSize: 13,
         ),

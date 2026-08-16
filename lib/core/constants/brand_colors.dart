@@ -1,34 +1,29 @@
 import 'package:flutter/material.dart';
 
-/// Official ADii Labs Brand Colors (V1 Palette)
+/// Official ADii Labs Brand Colors (V2 Palette)
 abstract class BrandColors {
-  // Primary Dark Palette
-  static const Color deepNavy = Color(0xFF07111F);
-  static const Color surfaceDark = Color(0xFF0D1B2A);
-  static const Color cardDark = Color(0xFF132238);
-  static const Color borderDark = Color(0xFF1E324D);
+  // Dark Palette (Primary)
+  static const Color background = Color(0xFF080B10);
+  static const Color surface = Color(0xFF10151D);
+  static const Color surfaceElevated = Color(0xFF151B24);
+  static const Color border = Color(0xFF202833);
 
-  // Accents
-  static const Color electricBlue = Color(0xFF2F80FF);
-  static const Color indigo = Color(0xFF635BFF);
-  static const Color electricBlueHover = Color(0xFF1A6CEB);
+  // Brand Accents
+  static const Color primary = Color(0xFF4D8DFF);
+  static const Color primaryHover = Color(0xFF6A9EFF);
+  static const Color primarySoft = Color(0xFF7AA7FF);
 
-  // Light Palette
-  static const Color surfaceLight = Color(0xFFF8FAFC);
-  static const Color cardLight = Color(0xFFFFFFFF);
-  static const Color borderLight = Color(0xFFE2E8F0);
+  // Text
+  static const Color textMain = Color(0xFFF5F7FA);
+  static const Color textSecondary = Color(0xFF9AA4B2);
+  static const Color textMuted = Color(0xFF667181);
 
-  // Text & Neutral Colors
-  static const Color white = Color(0xFFFFFFFF);
-  static const Color textDarkPrimary = Color(0xFFF1F5F9);
-  static const Color textDarkSecondary = Color(0xFF94A3B8);
-  static const Color mutedSlate = Color(0xFF94A3B8);
-  static const Color textLightPrimary = Color(0xFF0F172A);
-  static const Color textLightSecondary = Color(0xFF475569);
-
-  // Status Badges
-  static const Color badgeGreenText = Color(0xFF10B981);
-  static const Color badgeGreenBg = Color(0x1F10B981);
-  static const Color badgeBlueText = Color(0xFF3B82F6);
-  static const Color badgeBlueBg = Color(0x1F3B82F6);
+  // Light Palette (For light mode support)
+  static const Color backgroundLight = Color(0xFFFAFAFA);
+  static const Color surfaceLight = Color(0xFFFFFFFF);
+  static const Color surfaceElevatedLight = Color(0xFFF5F5F5);
+  static const Color borderLight = Color(0xFFE5E7EB);
+  static const Color textMainLight = Color(0xFF111827);
+  static const Color textSecondaryLight = Color(0xFF4B5563);
+  static const Color textMutedLight = Color(0xFF9CA3AF);
 }

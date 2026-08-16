@@ -22,15 +22,15 @@ class NewsletterSignupWidget extends StatelessWidget {
           width: double.infinity,
           padding: EdgeInsets.all(isMobile ? 24 : 36),
           decoration: BoxDecoration(
-            color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+            color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: isDark ? BrandColors.borderDark : BrandColors.borderLight,
+              color: isDark ? BrandColors.border : BrandColors.borderLight,
               width: 1.5,
             ),
             boxShadow: [
               BoxShadow(
-                color: BrandColors.electricBlue.withValues(
+                color: BrandColors.primary.withValues(
                   alpha: isDark ? 0.08 : 0.04,
                 ),
                 blurRadius: 32,
@@ -46,12 +46,12 @@ class NewsletterSignupWidget extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: BrandColors.electricBlue.withValues(alpha: 0.15),
+                      color: BrandColors.primary.withValues(alpha: 0.15),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(
                       Icons.mark_email_read_rounded,
-                      color: BrandColors.electricBlue,
+                      color: BrandColors.primary,
                       size: 24,
                     ),
                   ),
@@ -64,8 +64,8 @@ class NewsletterSignupWidget extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                   fontSize: isMobile ? 20 : 24,
                   color: isDark
-                      ? BrandColors.textDarkPrimary
-                      : BrandColors.textLightPrimary,
+                      ? BrandColors.textMain
+                      : BrandColors.textMainLight,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -74,8 +74,8 @@ class NewsletterSignupWidget extends StatelessWidget {
                 'Get early access to InvoiceFlow Pro releases, studio dev logs, and Flutter + AI insights.',
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: isDark
-                      ? BrandColors.textDarkSecondary
-                      : BrandColors.textLightSecondary,
+                      ? BrandColors.textSecondary
+                      : BrandColors.textSecondaryLight,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -88,10 +88,10 @@ class NewsletterSignupWidget extends StatelessWidget {
                     vertical: 14,
                   ),
                   decoration: BoxDecoration(
-                    color: BrandColors.badgeGreenBg,
+                    color: BrandColors.primarySoft.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                      color: BrandColors.badgeGreenText.withValues(alpha: 0.3),
+                      color: BrandColors.primary.withValues(alpha: 0.3),
                     ),
                   ),
                   child: const Row(
@@ -99,7 +99,7 @@ class NewsletterSignupWidget extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.check_circle_rounded,
-                        color: BrandColors.badgeGreenText,
+                        color: BrandColors.primary,
                         size: 20,
                       ),
                       SizedBox(width: 10),
@@ -107,7 +107,7 @@ class NewsletterSignupWidget extends StatelessWidget {
                         child: Text(
                           'Thank you for subscribing! You are now on the ADii Labs early access list.',
                           style: TextStyle(
-                            color: BrandColors.badgeGreenText,
+                            color: BrandColors.primary,
                             fontWeight: FontWeight.w700,
                             fontSize: 13,
                           ),
@@ -129,8 +129,8 @@ class NewsletterSignupWidget extends StatelessWidget {
                               onChanged: (val) => cubit.updateEmail(val),
                               style: TextStyle(
                                 color: isDark
-                                    ? BrandColors.textDarkPrimary
-                                    : BrandColors.textLightPrimary,
+                                    ? BrandColors.textMain
+                                    : BrandColors.textMainLight,
                                 fontSize: 14,
                               ),
                               decoration: InputDecoration(
@@ -142,20 +142,20 @@ class NewsletterSignupWidget extends StatelessWidget {
                                 ),
                                 filled: true,
                                 fillColor: isDark
-                                    ? BrandColors.deepNavy
+                                    ? BrandColors.surface
                                     : BrandColors.surfaceLight,
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(
                                     color: isDark
-                                        ? BrandColors.borderDark
+                                        ? BrandColors.border
                                         : BrandColors.borderLight,
                                   ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
                                   borderSide: const BorderSide(
-                                    color: BrandColors.electricBlue,
+                                    color: BrandColors.primary,
                                     width: 1.5,
                                   ),
                                 ),
@@ -168,8 +168,8 @@ class NewsletterSignupWidget extends StatelessWidget {
                                 ? null
                                 : () => cubit.subscribe(),
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: BrandColors.electricBlue,
-                              foregroundColor: BrandColors.white,
+                              backgroundColor: BrandColors.primary,
+                              foregroundColor: Colors.white,
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 20,
                                 vertical: 14,
@@ -185,7 +185,7 @@ class NewsletterSignupWidget extends StatelessWidget {
                                     height: 18,
                                     child: CircularProgressIndicator(
                                       strokeWidth: 2,
-                                      color: BrandColors.white,
+                                      color: Colors.white,
                                     ),
                                   )
                                 : const Text(

@@ -17,10 +17,10 @@ class Footer extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: isDark ? BrandColors.surfaceDark : BrandColors.surfaceLight,
+        color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
         border: Border(
           top: BorderSide(
-            color: isDark ? BrandColors.borderDark : BrandColors.borderLight,
+            color: isDark ? BrandColors.border : BrandColors.borderLight,
             width: 1,
           ),
         ),
@@ -48,7 +48,7 @@ class Footer extends StatelessWidget {
                               child: Container(
                                 width: 28,
                                 height: 28,
-                                color: BrandColors.electricBlue,
+                                color: BrandColors.primary,
                                 child: Image.asset(
                                   AssetPaths.studioLogo,
                                   width: 28,
@@ -59,7 +59,7 @@ class Footer extends StatelessWidget {
                                         child: Text(
                                           'A',
                                           style: TextStyle(
-                                            color: BrandColors.white,
+                                            color: Colors.white,
                                             fontWeight: FontWeight.w900,
                                             fontSize: 16,
                                           ),
@@ -83,8 +83,8 @@ class Footer extends StatelessWidget {
                           BrandConfig.tagline,
                           style: theme.textTheme.bodyMedium?.copyWith(
                             color: isDark
-                                ? BrandColors.textDarkSecondary
-                                : BrandColors.textLightSecondary,
+                                ? BrandColors.textSecondary
+                                : BrandColors.textSecondaryLight,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -93,8 +93,8 @@ class Footer extends StatelessWidget {
                           BrandConfig.positioning,
                           style: theme.textTheme.bodySmall?.copyWith(
                             color: isDark
-                                ? BrandColors.textDarkSecondary
-                                : BrandColors.textLightSecondary,
+                                ? BrandColors.textSecondary
+                                : BrandColors.textSecondaryLight,
                           ),
                         ),
                       ],
@@ -115,10 +115,6 @@ class Footer extends StatelessWidget {
                               label: 'InvoiceFlow Pro',
                               onTap: () =>
                                   onNavigate('/products/invoiceflow-pro'),
-                            ),
-                            _FooterItem(
-                              label: 'Dev Logs',
-                              onTap: () => onNavigate('/blog'),
                             ),
                             _FooterItem(
                               label: 'About Studio',
@@ -172,7 +168,7 @@ class Footer extends StatelessWidget {
                           child: Container(
                             width: 28,
                             height: 28,
-                            color: BrandColors.electricBlue,
+                            color: BrandColors.primary,
                             child: Image.asset(
                               AssetPaths.studioLogo,
                               width: 28,
@@ -183,7 +179,7 @@ class Footer extends StatelessWidget {
                                     child: Text(
                                       'A',
                                       style: TextStyle(
-                                        color: BrandColors.white,
+                                        color: Colors.white,
                                         fontWeight: FontWeight.w900,
                                         fontSize: 16,
                                       ),
@@ -207,8 +203,8 @@ class Footer extends StatelessWidget {
                       BrandConfig.tagline,
                       style: theme.textTheme.bodyMedium?.copyWith(
                         color: isDark
-                            ? BrandColors.textDarkSecondary
-                            : BrandColors.textLightSecondary,
+                            ? BrandColors.textSecondary
+                            : BrandColors.textSecondaryLight,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -248,7 +244,7 @@ class Footer extends StatelessWidget {
               const SizedBox(height: 40),
               Divider(
                 color: isDark
-                    ? BrandColors.borderDark
+                    ? BrandColors.border
                     : BrandColors.borderLight,
               ),
               const SizedBox(height: 24),
@@ -261,14 +257,14 @@ class Footer extends StatelessWidget {
                     '© ${BrandConfig.currentYear} ${BrandConfig.brandName}. All rights reserved.',
                     style: theme.textTheme.bodySmall?.copyWith(
                       color: isDark
-                          ? BrandColors.textDarkSecondary
-                          : BrandColors.textLightSecondary,
+                          ? BrandColors.textSecondary
+                          : BrandColors.textSecondaryLight,
                     ),
                   ),
                   Text(
                     'Flutter + AI',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: BrandColors.electricBlue,
+                      color: BrandColors.primary,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -302,8 +298,8 @@ class _FooterNavColumn extends StatelessWidget {
             fontWeight: FontWeight.w700,
             fontSize: 14,
             color: isDark
-                ? BrandColors.textDarkPrimary
-                : BrandColors.textLightPrimary,
+                ? BrandColors.textMain
+                : BrandColors.textMainLight,
           ),
         ),
         const SizedBox(height: 12),
@@ -370,10 +366,10 @@ class _FooterLinkTextState extends State<_FooterLinkText> {
               widget.label,
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: _isHovered
-                    ? BrandColors.electricBlue
+                    ? BrandColors.primary
                     : (isDark
-                          ? BrandColors.textDarkSecondary
-                          : BrandColors.textLightSecondary),
+                          ? BrandColors.textSecondary
+                          : BrandColors.textSecondaryLight),
               ),
             ),
             if (widget.isExternal) ...[
@@ -382,10 +378,10 @@ class _FooterLinkTextState extends State<_FooterLinkText> {
                 Icons.north_east_rounded,
                 size: 11,
                 color: _isHovered
-                    ? BrandColors.electricBlue
+                    ? BrandColors.primary
                     : (isDark
-                          ? BrandColors.textDarkSecondary
-                          : BrandColors.textLightSecondary),
+                          ? BrandColors.textSecondary
+                          : BrandColors.textSecondaryLight),
               ),
             ],
           ],

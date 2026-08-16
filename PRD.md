@@ -1,53 +1,56 @@
-# 📄 ADii Labs Website — Product Requirement Document (PRD V1)
+# ADii Labs Website - Product Requirements Document (PRD)
 
-## 1. Project Overview
-- **Product Name**: ADii Labs Website
-- **Brand Name**: ADii Labs
-- **Tagline**: Build. Ship. Improve.
-- **Positioning**: Software products built with Flutter + AI.
-- **Founder**: Muhammad ADii (`@adii_pk`)
-- **Official GitHub**: `https://github.com/madeel931/`
-- **Purpose**: Build a professional, fast, responsive web application for ADii Labs, an independent software studio focused on building and shipping useful software products with Flutter and AI. The website establishes ADii Labs as a real software product studio.
-- **Flagship Product**: InvoiceFlow Pro (Offline-first invoicing software for small businesses).
+## 1. Overview
+The ADii Labs website serves as the primary digital presence for an independent software studio. It is designed to be highly professional, distinctive, and credible, showcasing products like InvoiceFlow Pro while demonstrating the studio's technical competence using Flutter Web.
 
----
+## 2. Core Objectives
+- Establish a strong, independent brand identity (Build. Ship. Improve.).
+- Showcase flagship products (e.g., InvoiceFlow Pro) with clear value propositions.
+- Convey technical credibility through design, performance, and architecture (Offline-first, Material 3).
+- Provide a clean, minimalist user experience without bloated animations or generic templates.
 
-## 2. Core Specifications & Features
+## 3. Target Audience
+- Small business owners looking for reliable software tools.
+- Developers and tech enthusiasts following the "Build in Public" journey.
+- Potential collaborators or clients.
 
-### Brand Identity & Palette
-- **Deep Navy**: `#07111F` (Background Dark)
-- **Surface Dark**: `#0D1B2A`
-- **Card Dark**: `#132337`
-- **Electric Blue**: `#2F80FF` (Primary Brand Accent)
-- **Indigo Accent**: `#635BFF`
-- **Muted Slate**: `#94A3B8`
-- **Surface Light**: `#F8FAFC`
-- **Card Light**: `#FFFFFF`
+## 4. Key Features & Pages
+### 4.1. Homepage
+- **Hero Section**: Clear value proposition with "Explore Products" CTA.
+- **Featured Product**: Highlight InvoiceFlow Pro with offline-first capabilities.
+- **Capabilities Grid**: Emphasize offline-first, local storage, and cross-platform support.
+- **Studio Philosophy**: "We don't build demos. We build software that ships."
+- **Building in Public**: Link to X (Twitter) for development logs.
+- **Technical Credibility**: Highlight Flutter 3+, Dart, Material 3.
 
-### Pages & Navigation Map
-1. **Home Page (`/`)**: Studio Hero, Featured Flagship Product Spotlight, Live Interactive Demo Invoice Builder, Studio Philosophy Grid, Product Updates Newsletter Signup, Building in Public Banner.
-2. **Products Catalog (`/products`)**: Complete list of studio applications (InvoiceFlow Pro + Coming Soon products).
-3. **InvoiceFlow Pro Page (`/products/invoiceflow-pro`)**: Flagship hero, interactive macOS window showcase gallery (Dark/Light/RTL/Currency tabs), live interactive demo widget, capabilities grid, verified technical specifications.
-4. **Dev Logs & Engineering Blog (`/blog`)**: Studio articles on offline-first architecture, Isar DB, AI pairing workflows, and RTL localization.
-5. **About Page (`/about`)**: Studio mission, founder biography, technology stack focus.
-6. **Contact Page (`/contact`)**: Direct mailto triggers, X, and GitHub social connections.
+### 4.2. Products Page
+- Catalog of available and upcoming products.
+- Status badges (AVAILABLE, IN DEVELOPMENT).
+- Direct links to detailed product pages.
 
----
+### 4.3. InvoiceFlow Pro Details Page
+- Comprehensive overview of the app's features.
+- Screenshot gallery showcasing different themes and localizations (RTL support, Custom Currency).
+- Technical specs and trust signals.
+- External links to purchase or view on GitHub.
 
-## 3. Technical Architecture
+### 4.4. About & Contact
+- Information about the sole developer and the studio's mission.
+- Links to GitHub and X (Twitter) for contact and collaboration.
 
-- **Framework**: Flutter Web (Dart 3.x)
-- **State Management**: `flutter_bloc` (Cubit Pattern)
-- **Networking**: `http` package for real HTTP email POST API submissions.
-- **Routing Engine**: `AppRouter` with route title synchronization (`ADii Labs — Build. Ship. Improve.`, etc.).
-- **Typography**: Google Fonts Inter.
-- **Analytics**: Google Analytics GA4 (`G-ADIILABS2026`).
-- **CI/CD & Hosting**: GitHub Actions (`.github/workflows/deploy.yml`) for GitHub Pages & Firebase Hosting (`firebase.json`).
+## 5. Design System (V2)
+- **Primary Color**: True Blue (#0066FF) replacing generic neon blue.
+- **Backgrounds**: Slate Gray variants for dark mode, crisp white for light mode.
+- **Typography**: Inter (Google Fonts) for maximum legibility and clean hierarchy.
+- **Layout**: Constrained max-width (1200px) with responsive padding.
 
----
+## 6. Technical Stack
+- **Framework**: Flutter Web
+- **State Management**: flutter_bloc
+- **Routing**: go_router
+- **Hosting**: GitHub Pages
 
-## 4. Verification & Quality Standards
-
-- **Analyzer**: `flutter analyze` — 0 issues found.
-- **Test Suite**: `flutter test` — 4/4 passing unit & smoke tests.
-- **Web Release Build**: `flutter build web --release` — Tree-shaken icon assets (>99% font reduction) and 0 compilation errors.
+## 7. Future Roadmap
+- Integration of a blog/devlog section directly on the site.
+- Additional product launches.
+- Analytics and performance tracking.

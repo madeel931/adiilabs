@@ -81,12 +81,12 @@ class BlogPage extends StatelessWidget {
                           padding: EdgeInsets.all(isMobile ? 20 : 28),
                           decoration: BoxDecoration(
                             color: isDark
-                                ? BrandColors.surfaceDark
-                                : BrandColors.cardLight,
+                                ? BrandColors.surface
+                                : BrandColors.surfaceLight,
                             borderRadius: BorderRadius.circular(16),
                             border: Border.all(
                               color: isDark
-                                  ? BrandColors.borderDark
+                                  ? BrandColors.border
                                   : BrandColors.borderLight,
                               width: 1.5,
                             ),
@@ -102,14 +102,14 @@ class BlogPage extends StatelessWidget {
                                       vertical: 4,
                                     ),
                                     decoration: BoxDecoration(
-                                      color: BrandColors.electricBlue
+                                      color: BrandColors.primary
                                           .withValues(alpha: 0.15),
                                       borderRadius: BorderRadius.circular(6),
                                     ),
                                     child: Text(
                                       article.category.toUpperCase(),
                                       style: const TextStyle(
-                                        color: BrandColors.electricBlue,
+                                        color: BrandColors.primary,
                                         fontWeight: FontWeight.w700,
                                         fontSize: 11,
                                       ),
@@ -120,8 +120,8 @@ class BlogPage extends StatelessWidget {
                                     '${article.date} • ${article.readTime}',
                                     style: theme.textTheme.bodySmall?.copyWith(
                                       color: isDark
-                                          ? BrandColors.textDarkSecondary
-                                          : BrandColors.textLightSecondary,
+                                          ? BrandColors.textSecondary
+                                          : BrandColors.textSecondaryLight,
                                     ),
                                   ),
                                 ],
@@ -133,8 +133,8 @@ class BlogPage extends StatelessWidget {
                                   fontWeight: FontWeight.w800,
                                   fontSize: isMobile ? 18 : 22,
                                   color: isDark
-                                      ? BrandColors.textDarkPrimary
-                                      : BrandColors.textLightPrimary,
+                                      ? BrandColors.textMain
+                                      : BrandColors.textMainLight,
                                 ),
                               ),
                               const SizedBox(height: 8),
@@ -142,8 +142,8 @@ class BlogPage extends StatelessWidget {
                                 article.summary,
                                 style: theme.textTheme.bodyMedium?.copyWith(
                                   color: isDark
-                                      ? BrandColors.textDarkSecondary
-                                      : BrandColors.textLightSecondary,
+                                      ? BrandColors.textSecondary
+                                      : BrandColors.textSecondaryLight,
                                   height: 1.5,
                                 ),
                               ),
@@ -153,7 +153,7 @@ class BlogPage extends StatelessWidget {
                                   Text(
                                     'Read Full Article',
                                     style: theme.textTheme.bodyMedium?.copyWith(
-                                      color: BrandColors.electricBlue,
+                                      color: BrandColors.primary,
                                       fontWeight: FontWeight.w700,
                                     ),
                                   ),
@@ -161,7 +161,7 @@ class BlogPage extends StatelessWidget {
                                   const Icon(
                                     Icons.arrow_forward_rounded,
                                     size: 16,
-                                    color: BrandColors.electricBlue,
+                                    color: BrandColors.primary,
                                   ),
                                 ],
                               ),
@@ -192,12 +192,12 @@ class BlogPage extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
         decoration: BoxDecoration(
-          color: isSelected ? BrandColors.electricBlue : Colors.transparent,
+          color: isSelected ? BrandColors.primary : Colors.transparent,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: isSelected
-                ? BrandColors.electricBlue
-                : BrandColors.mutedSlate,
+                ? BrandColors.primary
+                : BrandColors.textMuted,
           ),
         ),
         child: Text(
@@ -205,7 +205,7 @@ class BlogPage extends StatelessWidget {
           style: TextStyle(
             fontSize: 12,
             fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-            color: isSelected ? BrandColors.white : BrandColors.mutedSlate,
+            color: isSelected ? Colors.white : BrandColors.textMuted,
           ),
         ),
       ),
@@ -238,13 +238,13 @@ class BlogPage extends StatelessWidget {
                     Icon(
                       Icons.arrow_back_rounded,
                       size: 16,
-                      color: BrandColors.electricBlue,
+                      color: BrandColors.primary,
                     ),
                     SizedBox(width: 6),
                     Text(
                       'Back to All Articles',
                       style: TextStyle(
-                        color: BrandColors.electricBlue,
+                        color: BrandColors.primary,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -259,8 +259,8 @@ class BlogPage extends StatelessWidget {
                 fontSize: isMobile ? 28 : 38,
                 fontWeight: FontWeight.w800,
                 color: isDark
-                    ? BrandColors.textDarkPrimary
-                    : BrandColors.textLightPrimary,
+                    ? BrandColors.textMain
+                    : BrandColors.textMainLight,
               ),
             ),
             const SizedBox(height: 12),
@@ -269,7 +269,7 @@ class BlogPage extends StatelessWidget {
                 const Icon(
                   Icons.person_outline_rounded,
                   size: 16,
-                  color: BrandColors.electricBlue,
+                  color: BrandColors.primary,
                 ),
                 const SizedBox(width: 6),
                 Text(
@@ -284,8 +284,8 @@ class BlogPage extends StatelessWidget {
                   '${article.date} • ${article.readTime}',
                   style: TextStyle(
                     color: isDark
-                        ? BrandColors.mutedSlate
-                        : BrandColors.textLightSecondary,
+                        ? BrandColors.textMuted
+                        : BrandColors.textSecondaryLight,
                     fontSize: 13,
                   ),
                 ),
@@ -296,11 +296,11 @@ class BlogPage extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.all(isMobile ? 20 : 32),
               decoration: BoxDecoration(
-                color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+                color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
                   color: isDark
-                      ? BrandColors.borderDark
+                      ? BrandColors.border
                       : BrandColors.borderLight,
                 ),
               ),
@@ -310,8 +310,8 @@ class BlogPage extends StatelessWidget {
                   height: 1.8,
                   fontSize: 16,
                   color: isDark
-                      ? BrandColors.textDarkSecondary
-                      : BrandColors.textLightSecondary,
+                      ? BrandColors.textSecondary
+                      : BrandColors.textSecondaryLight,
                 ),
               ),
             ),

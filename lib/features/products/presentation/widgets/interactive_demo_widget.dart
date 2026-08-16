@@ -21,15 +21,15 @@ class InteractiveDemoWidget extends StatelessWidget {
         return Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+            color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: BrandColors.electricBlue.withValues(alpha: 0.4),
+              color: BrandColors.primary.withValues(alpha: 0.4),
               width: 1.5,
             ),
             boxShadow: [
               BoxShadow(
-                color: BrandColors.electricBlue.withValues(alpha: 0.12),
+                color: BrandColors.primary.withValues(alpha: 0.12),
                 blurRadius: 32,
                 offset: const Offset(0, 16),
               ),
@@ -46,7 +46,7 @@ class InteractiveDemoWidget extends StatelessWidget {
                 ),
                 decoration: BoxDecoration(
                   color: isDark
-                      ? BrandColors.deepNavy
+                      ? BrandColors.surface
                       : BrandColors.surfaceLight,
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(15),
@@ -54,7 +54,7 @@ class InteractiveDemoWidget extends StatelessWidget {
                   border: Border(
                     bottom: BorderSide(
                       color: isDark
-                          ? BrandColors.borderDark
+                          ? BrandColors.border
                           : BrandColors.borderLight,
                     ),
                   ),
@@ -63,7 +63,7 @@ class InteractiveDemoWidget extends StatelessWidget {
                   children: [
                     const Icon(
                       Icons.touch_app_rounded,
-                      color: BrandColors.electricBlue,
+                      color: BrandColors.primary,
                       size: 20,
                     ),
                     const SizedBox(width: 10),
@@ -73,8 +73,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                         fontSize: 15,
                         color: isDark
-                            ? BrandColors.textDarkPrimary
-                            : BrandColors.textLightPrimary,
+                            ? BrandColors.textMain
+                            : BrandColors.textMainLight,
                       ),
                     ),
                     const Spacer(),
@@ -84,7 +84,7 @@ class InteractiveDemoWidget extends StatelessWidget {
                         vertical: 4,
                       ),
                       decoration: BoxDecoration(
-                        color: BrandColors.badgeGreenBg,
+                        color: BrandColors.primarySoft.withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Row(
@@ -92,13 +92,13 @@ class InteractiveDemoWidget extends StatelessWidget {
                           Icon(
                             Icons.bolt_rounded,
                             size: 12,
-                            color: BrandColors.badgeGreenText,
+                            color: BrandColors.primary,
                           ),
                           SizedBox(width: 4),
                           Text(
                             'LIVE FLUTTER DEMO',
                             style: TextStyle(
-                              color: BrandColors.badgeGreenText,
+                              color: BrandColors.primary,
                               fontWeight: FontWeight.w800,
                               fontSize: 10,
                             ),
@@ -126,7 +126,7 @@ class InteractiveDemoWidget extends StatelessWidget {
                             'Test Live Controls',
                             style: theme.textTheme.titleSmall?.copyWith(
                               fontWeight: FontWeight.w700,
-                              color: BrandColors.electricBlue,
+                              color: BrandColors.primary,
                             ),
                           ),
                           const SizedBox(height: 16),
@@ -138,8 +138,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                             initialValue: state.clientName,
                             style: TextStyle(
                               color: isDark
-                                  ? BrandColors.white
-                                  : BrandColors.deepNavy,
+                                  ? Colors.white
+                                  : BrandColors.surface,
                               fontSize: 13,
                             ),
                             decoration: _inputDecoration(isDark, 'Client name'),
@@ -157,8 +157,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                             initialValue: state.itemDescription,
                             style: TextStyle(
                               color: isDark
-                                  ? BrandColors.white
-                                  : BrandColors.deepNavy,
+                                  ? Colors.white
+                                  : BrandColors.surface,
                               fontSize: 13,
                             ),
                             decoration: _inputDecoration(
@@ -186,7 +186,7 @@ class InteractiveDemoWidget extends StatelessWidget {
                                       min: 1,
                                       max: 10,
                                       divisions: 9,
-                                      activeColor: BrandColors.electricBlue,
+                                      activeColor: BrandColors.primary,
                                       onChanged: (val) =>
                                           cubit.updateQuantity(val.round()),
                                     ),
@@ -211,8 +211,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                                       keyboardType: TextInputType.number,
                                       style: TextStyle(
                                         color: isDark
-                                            ? BrandColors.white
-                                            : BrandColors.deepNavy,
+                                            ? Colors.white
+                                            : BrandColors.surface,
                                         fontSize: 13,
                                       ),
                                       decoration: _inputDecoration(
@@ -263,12 +263,12 @@ class InteractiveDemoWidget extends StatelessWidget {
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
                           color: state.isDarkMode
-                              ? BrandColors.deepNavy
+                              ? BrandColors.surface
                               : BrandColors.surfaceLight,
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
                             color: isDark
-                                ? BrandColors.borderDark
+                                ? BrandColors.border
                                 : BrandColors.borderLight,
                           ),
                         ),
@@ -289,8 +289,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                                         fontSize: 14,
                                         letterSpacing: 0.5,
                                         color: state.isDarkMode
-                                            ? BrandColors.electricBlue
-                                            : BrandColors.indigo,
+                                            ? BrandColors.primary
+                                            : BrandColors.primary,
                                       ),
                                     ),
                                     const SizedBox(height: 2),
@@ -299,8 +299,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                                       style: TextStyle(
                                         fontSize: 11,
                                         color: state.isDarkMode
-                                            ? BrandColors.mutedSlate
-                                            : BrandColors.textLightSecondary,
+                                            ? BrandColors.textMuted
+                                            : BrandColors.textSecondaryLight,
                                       ),
                                     ),
                                   ],
@@ -311,13 +311,13 @@ class InteractiveDemoWidget extends StatelessWidget {
                                     vertical: 4,
                                   ),
                                   decoration: BoxDecoration(
-                                    color: BrandColors.badgeGreenBg,
+                                    color: BrandColors.primarySoft.withValues(alpha: 0.2),
                                     borderRadius: BorderRadius.circular(4),
                                   ),
                                   child: const Text(
                                     'PAID',
                                     style: TextStyle(
-                                      color: BrandColors.badgeGreenText,
+                                      color: BrandColors.primary,
                                       fontWeight: FontWeight.w800,
                                       fontSize: 10,
                                     ),
@@ -333,8 +333,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 11,
                                 color: state.isDarkMode
-                                    ? BrandColors.mutedSlate
-                                    : BrandColors.textLightSecondary,
+                                    ? BrandColors.textMuted
+                                    : BrandColors.textSecondaryLight,
                               ),
                             ),
                             const SizedBox(height: 2),
@@ -346,8 +346,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                                 fontWeight: FontWeight.w700,
                                 fontSize: 14,
                                 color: state.isDarkMode
-                                    ? BrandColors.white
-                                    : BrandColors.deepNavy,
+                                    ? Colors.white
+                                    : BrandColors.surface,
                               ),
                             ),
                             const SizedBox(height: 16),
@@ -357,8 +357,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                               padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                 color: state.isDarkMode
-                                    ? BrandColors.surfaceDark
-                                    : BrandColors.cardLight,
+                                    ? BrandColors.surface
+                                    : BrandColors.surfaceLight,
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Row(
@@ -373,8 +373,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                                         fontSize: 12,
                                         fontWeight: FontWeight.w600,
                                         color: state.isDarkMode
-                                            ? BrandColors.white
-                                            : BrandColors.deepNavy,
+                                            ? Colors.white
+                                            : BrandColors.surface,
                                       ),
                                     ),
                                   ),
@@ -383,8 +383,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 12,
                                       color: state.isDarkMode
-                                          ? BrandColors.mutedSlate
-                                          : BrandColors.textLightSecondary,
+                                          ? BrandColors.textMuted
+                                          : BrandColors.textSecondaryLight,
                                     ),
                                   ),
                                   const SizedBox(width: 16),
@@ -394,8 +394,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                                       fontSize: 12,
                                       fontWeight: FontWeight.w700,
                                       color: state.isDarkMode
-                                          ? BrandColors.white
-                                          : BrandColors.deepNavy,
+                                          ? Colors.white
+                                          : BrandColors.surface,
                                     ),
                                   ),
                                 ],
@@ -415,8 +415,8 @@ class InteractiveDemoWidget extends StatelessWidget {
                                       style: TextStyle(
                                         fontSize: 11,
                                         color: state.isDarkMode
-                                            ? BrandColors.mutedSlate
-                                            : BrandColors.textLightSecondary,
+                                            ? BrandColors.textMuted
+                                            : BrandColors.textSecondaryLight,
                                       ),
                                     ),
                                     const SizedBox(height: 4),
@@ -425,7 +425,7 @@ class InteractiveDemoWidget extends StatelessWidget {
                                       style: TextStyle(
                                         fontWeight: FontWeight.w900,
                                         fontSize: 18,
-                                        color: BrandColors.electricBlue,
+                                        color: BrandColors.primary,
                                       ),
                                     ),
                                   ],
@@ -452,17 +452,17 @@ class InteractiveDemoWidget extends StatelessWidget {
       isDense: true,
       contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       filled: true,
-      fillColor: isDark ? BrandColors.deepNavy : BrandColors.surfaceLight,
+      fillColor: isDark ? BrandColors.surface : BrandColors.surfaceLight,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(
-          color: isDark ? BrandColors.borderDark : BrandColors.borderLight,
+          color: isDark ? BrandColors.border : BrandColors.borderLight,
         ),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(
-          color: BrandColors.electricBlue,
+          color: BrandColors.primary,
           width: 1.5,
         ),
       ),
@@ -481,12 +481,12 @@ class InteractiveDemoWidget extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
-          color: isSelected ? BrandColors.electricBlue : Colors.transparent,
+          color: isSelected ? BrandColors.primary : Colors.transparent,
           borderRadius: BorderRadius.circular(6),
           border: Border.all(
             color: isSelected
-                ? BrandColors.electricBlue
-                : BrandColors.mutedSlate,
+                ? BrandColors.primary
+                : BrandColors.textMuted,
           ),
         ),
         child: Text(
@@ -494,7 +494,7 @@ class InteractiveDemoWidget extends StatelessWidget {
           style: TextStyle(
             fontSize: 11,
             fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-            color: isSelected ? BrandColors.white : BrandColors.mutedSlate,
+            color: isSelected ? Colors.white : BrandColors.textMuted,
           ),
         ),
       ),

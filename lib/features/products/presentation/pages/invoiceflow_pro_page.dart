@@ -90,13 +90,13 @@ class InvoiceFlowProPage extends StatelessWidget {
                 const Icon(
                   Icons.arrow_back_rounded,
                   size: 16,
-                  color: BrandColors.electricBlue,
+                  color: BrandColors.primary,
                 ),
                 const SizedBox(width: 6),
                 Text(
                   'Back to Products',
                   style: theme.textTheme.bodyMedium?.copyWith(
-                    color: BrandColors.electricBlue,
+                    color: BrandColors.primary,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -114,10 +114,10 @@ class InvoiceFlowProPage extends StatelessWidget {
               width: 64,
               height: 64,
               decoration: BoxDecoration(
-                color: isDark ? BrandColors.cardDark : BrandColors.surfaceLight,
+                color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color: BrandColors.electricBlue.withValues(alpha: 0.3),
+                  color: BrandColors.primary.withValues(alpha: 0.3),
                   width: 1.5,
                 ),
               ),
@@ -130,7 +130,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                     fit: BoxFit.contain,
                     errorBuilder: (context, error, stackTrace) => const Icon(
                       Icons.receipt_long_rounded,
-                      color: BrandColors.electricBlue,
+                      color: BrandColors.primary,
                       size: 36,
                     ),
                   ),
@@ -148,8 +148,8 @@ class InvoiceFlowProPage extends StatelessWidget {
                       fontSize: isMobile ? 32 : 44,
                       fontWeight: FontWeight.w800,
                       color: isDark
-                          ? BrandColors.textDarkPrimary
-                          : BrandColors.textLightPrimary,
+                          ? BrandColors.textMain
+                          : BrandColors.textMainLight,
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -158,7 +158,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                     style: theme.textTheme.headlineMedium?.copyWith(
                       fontSize: isMobile ? 18 : 22,
                       fontWeight: FontWeight.w600,
-                      color: BrandColors.electricBlue,
+                      color: BrandColors.primary,
                     ),
                   ),
                 ],
@@ -172,8 +172,8 @@ class InvoiceFlowProPage extends StatelessWidget {
           style: theme.textTheme.bodyLarge?.copyWith(
             fontSize: isMobile ? 16 : 18,
             color: isDark
-                ? BrandColors.textDarkSecondary
-                : BrandColors.textLightSecondary,
+                ? BrandColors.textSecondary
+                : BrandColors.textSecondaryLight,
             height: 1.6,
           ),
         ),
@@ -183,8 +183,8 @@ class InvoiceFlowProPage extends StatelessWidget {
           style: theme.textTheme.bodyMedium?.copyWith(
             fontSize: 15,
             color: isDark
-                ? BrandColors.textDarkSecondary
-                : BrandColors.textLightSecondary,
+                ? BrandColors.textSecondary
+                : BrandColors.textSecondaryLight,
             height: 1.6,
           ),
         ),
@@ -300,22 +300,22 @@ class InvoiceFlowProPage extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         color: isSelected
-                            ? BrandColors.electricBlue
+                            ? BrandColors.primary
                             : (isDark
-                                  ? BrandColors.surfaceDark
-                                  : BrandColors.cardLight),
+                                  ? BrandColors.surface
+                                  : BrandColors.surfaceLight),
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: isSelected
-                              ? BrandColors.electricBlue
+                              ? BrandColors.primary
                               : (isDark
-                                    ? BrandColors.borderDark
+                                    ? BrandColors.border
                                     : BrandColors.borderLight),
                         ),
                         boxShadow: isSelected
                             ? [
                                 BoxShadow(
-                                  color: BrandColors.electricBlue.withValues(
+                                  color: BrandColors.primary.withValues(
                                     alpha: 0.3,
                                   ),
                                   blurRadius: 12,
@@ -331,10 +331,10 @@ class InvoiceFlowProPage extends StatelessWidget {
                             meta.icon,
                             size: 16,
                             color: isSelected
-                                ? BrandColors.white
+                                ? Colors.white
                                 : (isDark
-                                      ? BrandColors.textDarkSecondary
-                                      : BrandColors.textLightSecondary),
+                                      ? BrandColors.textSecondary
+                                      : BrandColors.textSecondaryLight),
                           ),
                           const SizedBox(width: 8),
                           Text(
@@ -345,10 +345,10 @@ class InvoiceFlowProPage extends StatelessWidget {
                                   : FontWeight.w500,
                               fontSize: 13,
                               color: isSelected
-                                  ? BrandColors.white
+                                  ? Colors.white
                                   : (isDark
-                                        ? BrandColors.textDarkPrimary
-                                        : BrandColors.textLightPrimary),
+                                        ? BrandColors.textMain
+                                        : BrandColors.textMainLight),
                             ),
                           ),
                         ],
@@ -366,15 +366,15 @@ class InvoiceFlowProPage extends StatelessWidget {
         Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+            color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: isDark ? BrandColors.borderDark : BrandColors.borderLight,
+              color: isDark ? BrandColors.border : BrandColors.borderLight,
               width: 1.5,
             ),
             boxShadow: [
               BoxShadow(
-                color: BrandColors.electricBlue.withValues(
+                color: BrandColors.primary.withValues(
                   alpha: isDark ? 0.12 : 0.06,
                 ),
                 blurRadius: 40,
@@ -392,7 +392,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                 ),
                 decoration: BoxDecoration(
                   color: isDark
-                      ? BrandColors.deepNavy
+                      ? BrandColors.surface
                       : BrandColors.surfaceLight,
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(15),
@@ -400,7 +400,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                   border: Border(
                     bottom: BorderSide(
                       color: isDark
-                          ? BrandColors.borderDark
+                          ? BrandColors.border
                           : BrandColors.borderLight,
                     ),
                   ),
@@ -445,12 +445,12 @@ class InvoiceFlowProPage extends StatelessWidget {
                         ),
                         decoration: BoxDecoration(
                           color: isDark
-                              ? BrandColors.surfaceDark
-                              : BrandColors.cardLight,
+                              ? BrandColors.surface
+                              : BrandColors.surfaceLight,
                           borderRadius: BorderRadius.circular(6),
                           border: Border.all(
                             color: isDark
-                                ? BrandColors.borderDark
+                                ? BrandColors.border
                                 : BrandColors.borderLight,
                           ),
                         ),
@@ -460,7 +460,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                             const Icon(
                               Icons.lock_rounded,
                               size: 12,
-                              color: BrandColors.badgeGreenText,
+                              color: BrandColors.primary,
                             ),
                             const SizedBox(width: 6),
                             Flexible(
@@ -470,8 +470,8 @@ class InvoiceFlowProPage extends StatelessWidget {
                                   fontFamily: 'monospace',
                                   fontSize: 12,
                                   color: isDark
-                                      ? BrandColors.textDarkSecondary
-                                      : BrandColors.textLightSecondary,
+                                      ? BrandColors.textSecondary
+                                      : BrandColors.textSecondaryLight,
                                 ),
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -490,7 +490,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                           vertical: 4,
                         ),
                         decoration: BoxDecoration(
-                          color: BrandColors.badgeGreenBg,
+                          color: BrandColors.primarySoft.withValues(alpha: 0.2),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Row(
@@ -500,7 +500,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                               width: 6,
                               height: 6,
                               decoration: const BoxDecoration(
-                                color: BrandColors.badgeGreenText,
+                                color: BrandColors.primary,
                                 shape: BoxShape.circle,
                               ),
                             ),
@@ -508,7 +508,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                             Text(
                               'OFFLINE-FIRST',
                               style: theme.textTheme.bodySmall?.copyWith(
-                                color: BrandColors.badgeGreenText,
+                                color: BrandColors.primary,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 10,
                               ),
@@ -548,13 +548,13 @@ class InvoiceFlowProPage extends StatelessWidget {
                               return Container(
                                 height: 320,
                                 color: isDark
-                                    ? BrandColors.deepNavy
+                                    ? BrandColors.surface
                                     : BrandColors.surfaceLight,
                                 child: const Center(
                                   child: Text(
                                     'InvoiceFlow Pro Interface',
                                     style: TextStyle(
-                                      color: BrandColors.mutedSlate,
+                                      color: BrandColors.textMuted,
                                     ),
                                   ),
                                 ),
@@ -571,12 +571,12 @@ class InvoiceFlowProPage extends StatelessWidget {
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: isDark
-                            ? BrandColors.deepNavy
+                            ? BrandColors.surface
                             : BrandColors.surfaceLight,
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(
                           color: isDark
-                              ? BrandColors.borderDark
+                              ? BrandColors.border
                               : BrandColors.borderLight,
                         ),
                       ),
@@ -585,7 +585,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                           const Icon(
                             Icons.info_outline_rounded,
                             size: 16,
-                            color: BrandColors.electricBlue,
+                            color: BrandColors.primary,
                           ),
                           const SizedBox(width: 10),
                           Expanded(
@@ -593,8 +593,8 @@ class InvoiceFlowProPage extends StatelessWidget {
                               '${currentMeta.title}: ${currentMeta.specs}',
                               style: theme.textTheme.bodySmall?.copyWith(
                                 color: isDark
-                                    ? BrandColors.textDarkPrimary
-                                    : BrandColors.textLightPrimary,
+                                    ? BrandColors.textMain
+                                    : BrandColors.textMainLight,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 12,
                               ),
@@ -634,9 +634,9 @@ class InvoiceFlowProPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(
                         color: isSelected
-                            ? BrandColors.electricBlue
+                            ? BrandColors.primary
                             : (isDark
-                                  ? BrandColors.borderDark
+                                  ? BrandColors.border
                                   : BrandColors.borderLight),
                         width: isSelected ? 2.5 : 1,
                       ),
@@ -666,7 +666,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                             child: Text(
                               meta.label,
                               style: const TextStyle(
-                                color: BrandColors.white,
+                                color: Colors.white,
                                 fontSize: 10,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -721,11 +721,11 @@ class InvoiceFlowProPage extends StatelessWidget {
             return Container(
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
-                color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+                color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
                   color: isDark
-                      ? BrandColors.borderDark
+                      ? BrandColors.border
                       : BrandColors.borderLight,
                 ),
               ),
@@ -737,14 +737,14 @@ class InvoiceFlowProPage extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: BrandColors.electricBlue.withValues(
+                          color: BrandColors.primary.withValues(
                             alpha: 0.12,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: const Icon(
                           Icons.check_circle_outline_rounded,
-                          color: BrandColors.electricBlue,
+                          color: BrandColors.primary,
                           size: 20,
                         ),
                       ),
@@ -756,8 +756,8 @@ class InvoiceFlowProPage extends StatelessWidget {
                             fontWeight: FontWeight.w700,
                             fontSize: 18,
                             color: isDark
-                                ? BrandColors.textDarkPrimary
-                                : BrandColors.textLightPrimary,
+                                ? BrandColors.textMain
+                                : BrandColors.textMainLight,
                           ),
                         ),
                       ),
@@ -769,8 +769,8 @@ class InvoiceFlowProPage extends StatelessWidget {
                       feature.description,
                       style: theme.textTheme.bodyMedium?.copyWith(
                         color: isDark
-                            ? BrandColors.textDarkSecondary
-                            : BrandColors.textLightSecondary,
+                            ? BrandColors.textSecondary
+                            : BrandColors.textSecondaryLight,
                         height: 1.5,
                       ),
                     ),
@@ -795,10 +795,10 @@ class InvoiceFlowProPage extends StatelessWidget {
       width: double.infinity,
       padding: EdgeInsets.all(isMobile ? 24 : 36),
       decoration: BoxDecoration(
-        color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+        color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: isDark ? BrandColors.borderDark : BrandColors.borderLight,
+          color: isDark ? BrandColors.border : BrandColors.borderLight,
         ),
       ),
       child: Column(
@@ -808,7 +808,7 @@ class InvoiceFlowProPage extends StatelessWidget {
             children: [
               const Icon(
                 Icons.verified_user_rounded,
-                color: BrandColors.electricBlue,
+                color: BrandColors.primary,
                 size: 28,
               ),
               const SizedBox(width: 12),
@@ -818,8 +818,8 @@ class InvoiceFlowProPage extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                   fontSize: isMobile ? 20 : 24,
                   color: isDark
-                      ? BrandColors.textDarkPrimary
-                      : BrandColors.textLightPrimary,
+                      ? BrandColors.textMain
+                      : BrandColors.textMainLight,
                 ),
               ),
             ],
@@ -829,8 +829,8 @@ class InvoiceFlowProPage extends StatelessWidget {
             'All technical facts listed below have been verified directly against the production codebase of InvoiceFlow Pro.',
             style: theme.textTheme.bodyMedium?.copyWith(
               color: isDark
-                  ? BrandColors.textDarkSecondary
-                  : BrandColors.textLightSecondary,
+                  ? BrandColors.textSecondary
+                  : BrandColors.textSecondaryLight,
             ),
           ),
           const SizedBox(height: 24),
@@ -846,12 +846,12 @@ class InvoiceFlowProPage extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       color: isDark
-                          ? BrandColors.deepNavy
+                          ? BrandColors.surface
                           : BrandColors.surfaceLight,
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
                         color: isDark
-                            ? BrandColors.borderDark
+                            ? BrandColors.border
                             : BrandColors.borderLight,
                       ),
                     ),
@@ -861,7 +861,7 @@ class InvoiceFlowProPage extends StatelessWidget {
                         const Icon(
                           Icons.verified_rounded,
                           size: 16,
-                          color: BrandColors.electricBlue,
+                          color: BrandColors.primary,
                         ),
                         const SizedBox(width: 8),
                         Text(
@@ -869,8 +869,8 @@ class InvoiceFlowProPage extends StatelessWidget {
                           style: theme.textTheme.bodyMedium?.copyWith(
                             fontWeight: FontWeight.w600,
                             color: isDark
-                                ? BrandColors.textDarkPrimary
-                                : BrandColors.textLightPrimary,
+                                ? BrandColors.textMain
+                                : BrandColors.textMainLight,
                           ),
                         ),
                       ],

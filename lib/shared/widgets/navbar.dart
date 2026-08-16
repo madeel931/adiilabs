@@ -29,11 +29,11 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
       height: 72,
       decoration: BoxDecoration(
-        color: (isDark ? BrandColors.deepNavy : BrandColors.surfaceLight)
+        color: (isDark ? BrandColors.background : BrandColors.backgroundLight)
             .withValues(alpha: 0.95),
         border: Border(
           bottom: BorderSide(
-            color: isDark ? BrandColors.borderDark : BrandColors.borderLight,
+            color: isDark ? BrandColors.border : BrandColors.borderLight,
             width: 1,
           ),
         ),
@@ -61,7 +61,7 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                         child: Container(
                           width: 32,
                           height: 32,
-                          color: BrandColors.electricBlue,
+                          color: BrandColors.primary,
                           child: Image.asset(
                             AssetPaths.studioLogo,
                             width: 32,
@@ -72,7 +72,7 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                                   child: Text(
                                     'A',
                                     style: TextStyle(
-                                      color: BrandColors.white,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.w900,
                                       fontSize: 18,
                                     ),
@@ -89,8 +89,8 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                           fontSize: 20,
                           letterSpacing: -0.5,
                           color: isDark
-                              ? BrandColors.textDarkPrimary
-                              : BrandColors.textLightPrimary,
+                              ? BrandColors.textMain
+                              : BrandColors.textMainLight,
                         ),
                       ),
                     ],
@@ -112,12 +112,6 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                               currentRoute == '/products' ||
                               currentRoute.startsWith('/products/'),
                           onTap: () => onNavigate('/products'),
-                        ),
-                        const SizedBox(width: 20),
-                        _NavLink(
-                          label: 'Dev Logs',
-                          isSelected: currentRoute == '/blog',
-                          onTap: () => onNavigate('/blog'),
                         ),
                         const SizedBox(width: 20),
                         _NavLink(
@@ -148,8 +142,8 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                           onPressed: () =>
                               UrlLauncherUtils.launchURL(BrandConfig.githubUrl),
                           color: isDark
-                              ? BrandColors.textDarkSecondary
-                              : BrandColors.textLightSecondary,
+                              ? BrandColors.textSecondary
+                              : BrandColors.textSecondaryLight,
                         ),
 
                         // X Link Icon
@@ -162,8 +156,8 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                           onPressed: () =>
                               UrlLauncherUtils.launchURL(BrandConfig.xUrl),
                           color: isDark
-                              ? BrandColors.textDarkSecondary
-                              : BrandColors.textLightSecondary,
+                              ? BrandColors.textSecondary
+                              : BrandColors.textSecondaryLight,
                         ),
 
                         const SizedBox(width: 8),
@@ -180,16 +174,16 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                           onPressed: () =>
                               context.read<ThemeCubit>().toggleTheme(),
                           color: isDark
-                              ? BrandColors.textDarkSecondary
-                              : BrandColors.textLightSecondary,
+                              ? BrandColors.textSecondary
+                              : BrandColors.textSecondaryLight,
                         ),
 
                         const SizedBox(width: 12),
 
                         // Primary CTA
                         PrimaryButton(
-                          label: 'Explore Products',
-                          onPressed: () => onNavigate('/products'),
+                          label: 'Explore InvoiceFlow Pro',
+                          onPressed: () => onNavigate('/products/invoiceflow-pro'),
                         ),
                       ],
                     ),
@@ -210,14 +204,14 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                       tooltip: 'Toggle Theme',
                       onPressed: () => context.read<ThemeCubit>().toggleTheme(),
                       color: isDark
-                          ? BrandColors.textDarkSecondary
-                          : BrandColors.textLightSecondary,
+                          ? BrandColors.textSecondary
+                          : BrandColors.textSecondaryLight,
                     ),
                     IconButton(
                       icon: const Icon(Icons.menu_rounded, size: 28),
                       color: isDark
-                          ? BrandColors.textDarkPrimary
-                          : BrandColors.textLightPrimary,
+                          ? BrandColors.textMain
+                          : BrandColors.textMainLight,
                       onPressed: () {
                         Scaffold.of(context).openEndDrawer();
                       },
@@ -249,7 +243,7 @@ class MobileDrawer extends StatelessWidget {
 
     return Drawer(
       backgroundColor: isDark
-          ? BrandColors.surfaceDark
+          ? BrandColors.surface
           : BrandColors.surfaceLight,
       child: SafeArea(
         child: Padding(
@@ -267,7 +261,7 @@ class MobileDrawer extends StatelessWidget {
                         child: Container(
                           width: 28,
                           height: 28,
-                          color: BrandColors.electricBlue,
+                          color: BrandColors.primary,
                           child: Image.asset(
                             AssetPaths.studioLogo,
                             width: 28,
@@ -278,7 +272,7 @@ class MobileDrawer extends StatelessWidget {
                                   child: Text(
                                     'A',
                                     style: TextStyle(
-                                      color: BrandColors.white,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.w900,
                                       fontSize: 16,
                                     ),
@@ -330,14 +324,6 @@ class MobileDrawer extends StatelessWidget {
                 },
               ),
               _DrawerItem(
-                label: 'Dev Logs',
-                isSelected: currentRoute == '/blog',
-                onTap: () {
-                  Navigator.of(context).pop();
-                  onNavigate('/blog');
-                },
-              ),
-              _DrawerItem(
                 label: 'About',
                 isSelected: currentRoute == '/about',
                 onTap: () {
@@ -365,11 +351,11 @@ class MobileDrawer extends StatelessWidget {
               const Divider(),
               const SizedBox(height: 16),
               PrimaryButton(
-                label: 'Explore Products',
+                label: 'Explore InvoiceFlow Pro',
                 fullWidth: true,
                 onPressed: () {
                   Navigator.of(context).pop();
-                  onNavigate('/products');
+                  onNavigate('/products/invoiceflow-pro');
                 },
               ),
               const SizedBox(height: 16),
@@ -423,14 +409,14 @@ class _NavLinkState extends State<_NavLink> {
     final bool isDark = theme.brightness == Brightness.dark;
 
     final Color normalColor = widget.isSelected
-        ? BrandColors.electricBlue
+        ? BrandColors.primary
         : (isDark
-              ? BrandColors.textDarkSecondary
-              : BrandColors.textLightSecondary);
+              ? BrandColors.textSecondary
+              : BrandColors.textSecondaryLight);
 
     final Color activeColor = widget.isSelected
-        ? BrandColors.electricBlue
-        : (isDark ? BrandColors.textDarkPrimary : BrandColors.textLightPrimary);
+        ? BrandColors.primary
+        : (isDark ? BrandColors.textMain : BrandColors.textMainLight);
 
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
@@ -489,10 +475,10 @@ class _DrawerItem extends StatelessWidget {
           fontSize: 18,
           fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
           color: isSelected
-              ? BrandColors.electricBlue
+              ? BrandColors.primary
               : (isDark
-                    ? BrandColors.textDarkPrimary
-                    : BrandColors.textLightPrimary),
+                    ? BrandColors.textMain
+                    : BrandColors.textMainLight),
         ),
       ),
       onTap: onTap,

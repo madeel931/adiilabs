@@ -14,15 +14,15 @@ class StudioVisualSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+        color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: isDark ? BrandColors.borderDark : BrandColors.borderLight,
+          color: isDark ? BrandColors.border : BrandColors.borderLight,
           width: 1.5,
         ),
         boxShadow: [
           BoxShadow(
-            color: BrandColors.electricBlue.withValues(
+            color: BrandColors.primary.withValues(
               alpha: isDark ? 0.08 : 0.05,
             ),
             blurRadius: 32,
@@ -36,14 +36,14 @@ class StudioVisualSection extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
-              color: isDark ? BrandColors.deepNavy : BrandColors.surfaceLight,
+              color: isDark ? BrandColors.surface : BrandColors.surfaceLight,
               borderRadius: const BorderRadius.vertical(
                 top: Radius.circular(15),
               ),
               border: Border(
                 bottom: BorderSide(
                   color: isDark
-                      ? BrandColors.borderDark
+                      ? BrandColors.border
                       : BrandColors.borderLight,
                 ),
               ),
@@ -87,12 +87,12 @@ class StudioVisualSection extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     color: isDark
-                        ? BrandColors.surfaceDark
-                        : BrandColors.cardLight,
+                        ? BrandColors.surface
+                        : BrandColors.surfaceLight,
                     borderRadius: BorderRadius.circular(6),
                     border: Border.all(
                       color: isDark
-                          ? BrandColors.borderDark
+                          ? BrandColors.border
                           : BrandColors.borderLight,
                     ),
                   ),
@@ -102,7 +102,7 @@ class StudioVisualSection extends StatelessWidget {
                       const Icon(
                         Icons.flutter_dash_rounded,
                         size: 14,
-                        color: BrandColors.electricBlue,
+                        color: BrandColors.primary,
                       ),
                       const SizedBox(width: 6),
                       Text(
@@ -112,8 +112,8 @@ class StudioVisualSection extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           fontSize: 12,
                           color: isDark
-                              ? BrandColors.textDarkPrimary
-                              : BrandColors.textLightPrimary,
+                              ? BrandColors.textMain
+                              : BrandColors.textMainLight,
                         ),
                       ),
                     ],
@@ -128,7 +128,7 @@ class StudioVisualSection extends StatelessWidget {
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: BrandColors.badgeGreenBg,
+                    color: BrandColors.primarySoft.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
@@ -138,7 +138,7 @@ class StudioVisualSection extends StatelessWidget {
                         width: 6,
                         height: 6,
                         decoration: const BoxDecoration(
-                          color: BrandColors.badgeGreenText,
+                          color: BrandColors.primary,
                           shape: BoxShape.circle,
                         ),
                       ),
@@ -146,7 +146,7 @@ class StudioVisualSection extends StatelessWidget {
                       Text(
                         'SHIPPED v1.0',
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: BrandColors.badgeGreenText,
+                          color: BrandColors.primary,
                           fontWeight: FontWeight.w700,
                           fontSize: 10,
                           letterSpacing: 0.5,
@@ -177,11 +177,11 @@ class StudioVisualSection extends StatelessWidget {
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
                             height: 360,
-                            color: BrandColors.surfaceDark,
+                            color: BrandColors.surface,
                             child: const Center(
                               child: Text(
                                 'InvoiceFlow Pro Workspace Visual',
-                                style: TextStyle(color: BrandColors.mutedSlate),
+                                style: TextStyle(color: BrandColors.textMuted),
                               ),
                             ),
                           );
@@ -200,7 +200,7 @@ class StudioVisualSection extends StatelessWidget {
                           color: Colors.black.withValues(alpha: 0.75),
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
-                            color: BrandColors.electricBlue.withValues(
+                            color: BrandColors.primary.withValues(
                               alpha: 0.4,
                             ),
                           ),
@@ -210,13 +210,13 @@ class StudioVisualSection extends StatelessWidget {
                             Icon(
                               Icons.offline_bolt_rounded,
                               size: 14,
-                              color: BrandColors.electricBlue,
+                              color: BrandColors.primary,
                             ),
                             SizedBox(width: 6),
                             Text(
                               '100% Offline-First Flutter Engine',
                               style: TextStyle(
-                                color: BrandColors.white,
+                                color: Colors.white,
                                 fontSize: 11,
                                 fontWeight: FontWeight.w600,
                               ),

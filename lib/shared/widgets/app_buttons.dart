@@ -40,9 +40,9 @@ class _PrimaryButtonState extends State<PrimaryButton> {
           onPressed: widget.onPressed,
           style: ElevatedButton.styleFrom(
             backgroundColor: _isHovered
-                ? BrandColors.electricBlueHover
-                : BrandColors.electricBlue,
-            foregroundColor: BrandColors.white,
+                ? BrandColors.primaryHover
+                : BrandColors.primary,
+            foregroundColor: Colors.white,
             elevation: _isHovered ? 6 : 0,
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
             shape: RoundedRectangleBorder(
@@ -59,12 +59,12 @@ class _PrimaryButtonState extends State<PrimaryButton> {
                 widget.label,
                 style: theme.textTheme.labelLarge?.copyWith(
                   fontWeight: FontWeight.w600,
-                  color: BrandColors.white,
+                  color: Colors.white,
                 ),
               ),
               if (widget.icon != null) ...[
                 const SizedBox(width: 8),
-                Icon(widget.icon, size: 18, color: BrandColors.white),
+                Icon(widget.icon, size: 18, color: Colors.white),
               ],
             ],
           ),
@@ -113,16 +113,16 @@ class _SecondaryButtonState extends State<SecondaryButton> {
           style: OutlinedButton.styleFrom(
             backgroundColor: _isHovered
                 ? (isDark
-                      ? BrandColors.surfaceDark
+                      ? BrandColors.surface
                       : BrandColors.borderLight.withValues(alpha: 0.3))
                 : Colors.transparent,
             foregroundColor: isDark
-                ? BrandColors.textDarkPrimary
-                : BrandColors.textLightPrimary,
+                ? BrandColors.textMain
+                : BrandColors.textMainLight,
             side: BorderSide(
               color: _isHovered
-                  ? BrandColors.electricBlue
-                  : (isDark ? BrandColors.borderDark : BrandColors.borderLight),
+                  ? BrandColors.primary
+                  : (isDark ? BrandColors.border : BrandColors.borderLight),
               width: 1.5,
             ),
             padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 16),
@@ -138,8 +138,8 @@ class _SecondaryButtonState extends State<SecondaryButton> {
                 style: theme.textTheme.labelLarge?.copyWith(
                   fontWeight: FontWeight.w600,
                   color: isDark
-                      ? BrandColors.textDarkPrimary
-                      : BrandColors.textLightPrimary,
+                      ? BrandColors.textMain
+                      : BrandColors.textMainLight,
                 ),
               ),
               if (widget.icon != null) ...[
@@ -148,8 +148,8 @@ class _SecondaryButtonState extends State<SecondaryButton> {
                   widget.icon,
                   size: 18,
                   color: isDark
-                      ? BrandColors.textDarkPrimary
-                      : BrandColors.textLightPrimary,
+                      ? BrandColors.textMain
+                      : BrandColors.textMainLight,
                 ),
               ],
             ],

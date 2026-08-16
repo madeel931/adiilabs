@@ -27,17 +27,17 @@ class SectionHeader extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(
-              color: BrandColors.electricBlue.withValues(alpha: 0.12),
+              color: BrandColors.primary.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
-                color: BrandColors.electricBlue.withValues(alpha: 0.3),
+                color: BrandColors.primary.withValues(alpha: 0.3),
                 width: 1,
               ),
             ),
             child: Text(
               eyebrow!.toUpperCase(),
               style: theme.textTheme.labelMedium?.copyWith(
-                color: BrandColors.electricBlue,
+                color: BrandColors.primary,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 1.2,
                 fontSize: 12,
@@ -52,8 +52,8 @@ class SectionHeader extends StatelessWidget {
             fontSize: 32,
             fontWeight: FontWeight.w800,
             color: isDark
-                ? BrandColors.textDarkPrimary
-                : BrandColors.textLightPrimary,
+                ? BrandColors.textMain
+                : BrandColors.textMainLight,
           ),
           textAlign: alignment == CrossAxisAlignment.center
               ? TextAlign.center
@@ -65,8 +65,8 @@ class SectionHeader extends StatelessWidget {
             subtitle!,
             style: theme.textTheme.bodyLarge?.copyWith(
               color: isDark
-                  ? BrandColors.textDarkSecondary
-                  : BrandColors.textLightSecondary,
+                  ? BrandColors.textSecondary
+                  : BrandColors.textSecondaryLight,
               fontSize: 16,
               height: 1.6,
             ),
