@@ -1,4 +1,8 @@
 abstract class AssetPaths {
+  // Studio Branding Assets
+  static const String studioLogo = 'assets/branding/logo/adiilabs_logo.png';
+  static const String founderAvatar = 'assets/adii/adii.jpg';
+
   // InvoiceFlow Pro Assets
   static const String invoiceFlowAppIcon =
       'assets/products/invoiceflow_pro/hero/app_icon.png';

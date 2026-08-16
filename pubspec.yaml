@@ -48,6 +48,7 @@ flutter:
 
   assets:
     - assets/branding/logo/
+    - assets/adii/
     - assets/products/invoiceflow_pro/hero/
     - assets/products/invoiceflow_pro/screenshots/
 

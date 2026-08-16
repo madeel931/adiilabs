@@ -3,6 +3,7 @@ import '../../core/constants/brand_colors.dart';
 import '../../core/constants/brand_config.dart';
 import '../../core/responsive/responsive_layout.dart';
 import '../../core/utils/url_launcher_utils.dart';
+import '../../core/constants/asset_paths.dart';
 
 class Footer extends StatelessWidget {
   final Function(String route) onNavigate;
@@ -42,21 +43,28 @@ class Footer extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Container(
-                              width: 28,
-                              height: 28,
-                              decoration: BoxDecoration(
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(6),
+                              child: Container(
+                                width: 28,
+                                height: 28,
                                 color: BrandColors.electricBlue,
-                                borderRadius: BorderRadius.circular(6),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  'A',
-                                  style: TextStyle(
-                                    color: BrandColors.white,
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 16,
-                                  ),
+                                child: Image.asset(
+                                  AssetPaths.studioLogo,
+                                  width: 28,
+                                  height: 28,
+                                  fit: BoxFit.contain,
+                                  errorBuilder: (context, error, stackTrace) =>
+                                      const Center(
+                                        child: Text(
+                                          'A',
+                                          style: TextStyle(
+                                            color: BrandColors.white,
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                      ),
                                 ),
                               ),
                             ),
@@ -159,21 +167,28 @@ class Footer extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          width: 28,
-                          height: 28,
-                          decoration: BoxDecoration(
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(6),
+                          child: Container(
+                            width: 28,
+                            height: 28,
                             color: BrandColors.electricBlue,
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              'A',
-                              style: TextStyle(
-                                color: BrandColors.white,
-                                fontWeight: FontWeight.w900,
-                                fontSize: 16,
-                              ),
+                            child: Image.asset(
+                              AssetPaths.studioLogo,
+                              width: 28,
+                              height: 28,
+                              fit: BoxFit.contain,
+                              errorBuilder: (context, error, stackTrace) =>
+                                  const Center(
+                                    child: Text(
+                                      'A',
+                                      style: TextStyle(
+                                        color: BrandColors.white,
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ),
                             ),
                           ),
                         ),

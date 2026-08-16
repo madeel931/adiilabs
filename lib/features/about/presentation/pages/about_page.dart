@@ -6,6 +6,8 @@ import '../../../../core/utils/url_launcher_utils.dart';
 import '../../../../shared/widgets/app_buttons.dart';
 import '../../../../shared/widgets/section_header.dart';
 
+import '../../../../core/constants/asset_paths.dart';
+
 class AboutPage extends StatelessWidget {
   final Function(String route) onNavigate;
 
@@ -117,22 +119,29 @@ class AboutPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      // Avatar placeholder badge
-                      Container(
-                        width: 64,
-                        height: 64,
-                        decoration: BoxDecoration(
+                      // Founder Avatar Image
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Container(
+                          width: 64,
+                          height: 64,
                           color: BrandColors.electricBlue,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'MA',
-                            style: TextStyle(
-                              color: BrandColors.white,
-                              fontWeight: FontWeight.w900,
-                              fontSize: 24,
-                            ),
+                          child: Image.asset(
+                            AssetPaths.founderAvatar,
+                            width: 64,
+                            height: 64,
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) =>
+                                const Center(
+                                  child: Text(
+                                    'MA',
+                                    style: TextStyle(
+                                      color: BrandColors.white,
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 24,
+                                    ),
+                                  ),
+                                ),
                           ),
                         ),
                       ),

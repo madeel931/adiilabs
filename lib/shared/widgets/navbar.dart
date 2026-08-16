@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../core/constants/asset_paths.dart';
 import '../../core/constants/brand_colors.dart';
 import '../../core/constants/brand_config.dart';
 import '../../core/responsive/responsive_layout.dart';
@@ -55,21 +56,28 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                   child: Row(
                     children: [
-                      Container(
-                        width: 32,
-                        height: 32,
-                        decoration: BoxDecoration(
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Container(
+                          width: 32,
+                          height: 32,
                           color: BrandColors.electricBlue,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'A',
-                            style: TextStyle(
-                              color: BrandColors.white,
-                              fontWeight: FontWeight.w900,
-                              fontSize: 18,
-                            ),
+                          child: Image.asset(
+                            AssetPaths.studioLogo,
+                            width: 32,
+                            height: 32,
+                            fit: BoxFit.contain,
+                            errorBuilder: (context, error, stackTrace) =>
+                                const Center(
+                                  child: Text(
+                                    'A',
+                                    style: TextStyle(
+                                      color: BrandColors.white,
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ),
                           ),
                         ),
                       ),
@@ -252,11 +260,41 @@ class MobileDrawer extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    BrandConfig.brandName,
-                    style: theme.textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.w800,
-                    ),
+                  Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Container(
+                          width: 28,
+                          height: 28,
+                          color: BrandColors.electricBlue,
+                          child: Image.asset(
+                            AssetPaths.studioLogo,
+                            width: 28,
+                            height: 28,
+                            fit: BoxFit.contain,
+                            errorBuilder: (context, error, stackTrace) =>
+                                const Center(
+                                  child: Text(
+                                    'A',
+                                    style: TextStyle(
+                                      color: BrandColors.white,
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Text(
+                        BrandConfig.brandName,
+                        style: theme.textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ],
                   ),
                   IconButton(
                     icon: const Icon(Icons.close_rounded),

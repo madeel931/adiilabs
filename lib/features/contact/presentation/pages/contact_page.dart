@@ -6,6 +6,8 @@ import '../../../../core/utils/url_launcher_utils.dart';
 import '../../../../shared/widgets/app_buttons.dart';
 import '../../../../shared/widgets/section_header.dart';
 
+import '../../../../core/constants/asset_paths.dart';
+
 class ContactPage extends StatelessWidget {
   final Function(String route) onNavigate;
 
@@ -97,6 +99,74 @@ class ContactPage extends StatelessWidget {
                         UrlLauncherUtils.launchURL(BrandConfig.githubUrl),
                     isDark: isDark,
                     theme: theme,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 48),
+
+            // 3. FOUNDER PROFILE CARD
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(isMobile ? 20 : 28),
+              decoration: BoxDecoration(
+                color: isDark ? BrandColors.surfaceDark : BrandColors.cardLight,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: isDark
+                      ? BrandColors.borderDark
+                      : BrandColors.borderLight,
+                  width: 1.5,
+                ),
+              ),
+              child: Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Container(
+                      width: 56,
+                      height: 56,
+                      color: BrandColors.electricBlue,
+                      child: Image.asset(
+                        AssetPaths.founderAvatar,
+                        width: 56,
+                        height: 56,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) =>
+                            Image.asset(
+                              AssetPaths.studioLogo,
+                              width: 56,
+                              height: 56,
+                              fit: BoxFit.contain,
+                            ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          BrandConfig.founderName,
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 18,
+                            color: isDark
+                                ? BrandColors.textDarkPrimary
+                                : BrandColors.textLightPrimary,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          BrandConfig.founderRole,
+                          style: theme.textTheme.bodyMedium?.copyWith(
+                            color: BrandColors.electricBlue,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

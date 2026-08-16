@@ -7,6 +7,8 @@ import '../../../../shared/models/product_model.dart';
 import '../../../../shared/widgets/app_buttons.dart';
 import '../../../../shared/widgets/section_header.dart';
 
+import '../../../../core/constants/asset_paths.dart';
+
 import '../../../products/presentation/widgets/interactive_demo_widget.dart';
 import '../../../../shared/widgets/newsletter_signup_widget.dart';
 
@@ -77,12 +79,21 @@ class HomePage extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Container(
-                width: 8,
-                height: 8,
-                decoration: const BoxDecoration(
-                  color: BrandColors.electricBlue,
-                  shape: BoxShape.circle,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Image.asset(
+                  AssetPaths.studioLogo,
+                  width: 14,
+                  height: 14,
+                  fit: BoxFit.contain,
+                  errorBuilder: (context, error, stackTrace) => Container(
+                    width: 8,
+                    height: 8,
+                    decoration: const BoxDecoration(
+                      color: BrandColors.electricBlue,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(width: 8),
