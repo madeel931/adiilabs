@@ -47,10 +47,15 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/branding/logo/
-    - assets/adii/
-    - assets/products/invoiceflow_pro/hero/
-    - assets/products/invoiceflow_pro/screenshots/
+    - assets/branding/logo/adiilabs_logo.png
+    - assets/adii/adii.jpg
+    - assets/products/invoiceflow_pro/hero/app_icon.png
+    - assets/products/invoiceflow_pro/hero/splash_logo.png
+    - assets/products/invoiceflow_pro/screenshots/dashboard_320dp_en_dark.png
+    - assets/products/invoiceflow_pro/screenshots/dashboard_360dp_en_light.png
+    - assets/products/invoiceflow_pro/screenshots/dashboard_arabic_rtl.png
+    - assets/products/invoiceflow_pro/screenshots/dashboard_urdu_rtl.png
+    - assets/products/invoiceflow_pro/screenshots/dashboard_sar_selected.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
