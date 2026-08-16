@@ -91,7 +91,7 @@ class HomePage extends StatelessWidget {
         Text(
           'Build. Ship. Improve.',
           style: theme.textTheme.displayLarge?.copyWith(
-            fontSize: isMobile ? 48 : 88,
+            fontSize: isMobile ? 40 : 56,
           ),
           textAlign: isMobile ? TextAlign.center : TextAlign.start,
         ),
@@ -101,7 +101,7 @@ class HomePage extends StatelessWidget {
         Text(
           'Software products built with Flutter + AI.',
           style: theme.textTheme.headlineMedium?.copyWith(
-            fontSize: isMobile ? 24 : 32,
+            fontSize: isMobile ? 20 : 28,
             color: isDark ? BrandColors.textSecondary : BrandColors.textSecondaryLight,
           ),
           textAlign: isMobile ? TextAlign.center : TextAlign.start,
